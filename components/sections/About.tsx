@@ -29,10 +29,10 @@ export default function AboutSection() {
           <div className="bg-[#1A1A1A]/80 backdrop-blur-sm rounded-[32px] p-8 md:p-24 shadow-sm border border-white/10 flex flex-col justify-center min-h-[300px]">
             <div className="text-white/90 leading-relaxed space-y-4 font-light" style={{ fontFamily: 'var(--font-body)', fontSize: 'clamp(14px, 2vw, 20px)' }}>
               <p>
-                Final-year B.Tech student in Artificial Intelligence &amp; Data Science passionate about building impactful AI/ML and immersive technology solutions. As an AI/ML Intern at Rasa AI, I developed a Medical LLM Assistant featuring ECG analysis, prescription understanding, and interactive 3D healthcare training.
+                I am a B.Tech graduate in Artificial Intelligence and Data Science with specialized expertise in Machine Learning, Python, and DevOps. Passionate about leveraging AI to solve real-world challenges, I have built and contributed to projects spanning intelligent automation, healthcare AI, geospatial analytics, computer vision, and immersive AR/VR applications.
               </p>
               <p>
-                As an AR/VR Developer Intern at Betasoft, I created immersive applications that connected intelligent systems with real-world user experiences. Certified in Cybersecurity, DevOps, Python, and Machine Learning, I thrive on solving complex problems and transforming innovative ideas into practical solutions.
+                My technical foundation combines data science, software engineering, and cloud-native development, enabling me to design scalable, efficient, and impactful solutions. I thrive in dynamic environments where innovation, continuous learning, and problem-solving drive meaningful results. With a strong commitment to emerging technologies and practical implementation, I aim to bridge the gap between cutting-edge AI research and real-world applications that create measurable value.
               </p>
             </div>
           </div>
@@ -80,11 +80,11 @@ export default function AboutSection() {
           <div className="flex flex-col gap-4 w-full">
             <div className="bg-[#1A1A1A]/80 backdrop-blur-sm rounded-[24px] p-6 border border-white/10 flex items-center justify-between">
               <span className="text-white/90 font-medium">Internships</span>
-              <span className="text-white font-bold text-xl">2</span>
+              <span className="text-white font-bold text-lg">Intern at two companies</span>
             </div>
             <div className="bg-[#1A1A1A]/80 backdrop-blur-sm rounded-[24px] p-6 border border-white/10 flex items-center justify-between">
               <span className="text-white/90 font-medium">Projects</span>
-              <span className="text-white font-bold text-xl">3+</span>
+              <span className="text-white font-bold text-lg">Projects +5</span>
             </div>
           </div>
         )}

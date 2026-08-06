@@ -3,13 +3,11 @@
 import ShinyText from "@/components/ui/ShinyText";
 import SideRays from "@/components/ui/SideRays";
 import { useDevice } from "@/hooks/useDevice";
-import { useDimensions } from "@/hooks/useDimensions";
-import Script from "next/script";
 import { SITE_CONSTANTS } from "@/data/constants";
+import UnicornScene from "unicornstudio-react/next";
 
 export default function HeroSection() {
   const { isMobile } = useDevice();
-  const { ref: splineRef, dimensions: splineDimensions } = useDimensions();
   return (
     <section id="home" className="relative w-full min-h-screen flex items-center justify-center pt-24 pb-12 px-[clamp(16px,3vw,48px)] overflow-hidden">
       {/* Background Rays */}
@@ -54,8 +52,8 @@ export default function HeroSection() {
             </div>
           </h1>
 
-          <p className="text-white font-bold uppercase text-xs md:text-sm max-w-[600px] mb-10 leading-relaxed tracking-wide" style={{ fontFamily: 'var(--font-nav)' }}>
-            B.Tech AI & DS Undergraduate @ SREC | Intercollege Hackathon Winner | AI/ML Developer | Intern @ Rasa.ai & Betasoft | Open Source Contributor | GSoC Aspirant | 2025-2026 SREC Symposium President
+          <p className="text-white/90 font-normal text-sm md:text-base max-w-[600px] mb-10 leading-relaxed" style={{ fontFamily: 'var(--font-nav)' }}>
+            AI Engineer crafting intelligent systems through Machine Learning, Python, and DevOps. Turning ideas into scalable products across healthcare, geospatial intelligence, and immersive technologies.
           </p>
 
           <a href={SITE_CONSTANTS.resumeUrl} target="_blank" rel="noopener noreferrer" className="bg-white text-[#121212] rounded-full px-8 py-3.5 font-bold uppercase tracking-wider text-sm md:text-base hover:bg-gray-200 hover:scale-105 transition-all duration-300 inline-block">
@@ -63,17 +61,15 @@ export default function HeroSection() {
           </a>
         </div>
 
-        {/* Right Column: 3D Scene */}
+        {/* Right Column: Unicorn Studio 3D Scene */}
         {!isMobile && (
           <div className="flex-1 w-[90%] md:w-[85%] flex justify-center md:justify-end items-center h-[320px] md:h-[460px] relative translate-y-6 md:translate-y-12">
-            <div ref={splineRef} className="w-full h-full rounded-[24px] overflow-hidden relative shadow-2xl bg-white/5 backdrop-blur-sm border border-black/10 z-10 flex items-center justify-center">
-              {splineDimensions.width > 0 && splineDimensions.height > 0 && (
-                <>
-                  <Script type="module" src="https://cdn.spline.design/@splinetool/hana-viewer@1.2.54/hana-viewer.js" strategy="lazyOnload" />
-                  {/* @ts-ignore */}
-                  <hana-viewer url="https://prod.spline.design/L5O3NVTRUFMPWmo8-t41/scene.hanacode" style={{ width: '100%', height: '100%', transform: 'scale(1.4)' }}></hana-viewer>
-                </>
-              )}
+            <div className="w-full h-full rounded-[24px] overflow-hidden relative shadow-2xl bg-white/5 backdrop-blur-sm border border-black/10 z-10 flex items-center justify-center">
+              <UnicornScene 
+                projectId="ZYBuX9W4qjZR1Q5kGifI" 
+                width="100%" 
+                height="100%"
+              />
             </div>
           </div>
         )}
